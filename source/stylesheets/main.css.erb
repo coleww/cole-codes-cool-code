@@ -1,0 +1,46 @@
+<%= Rouge::Themes::Github.render(:scope => '.highlight') %>
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+aside {
+  float: left;
+  padding: 15px;
+  width: 25%;
+  padding-left: 25px;
+  border-right: 3px dashed black;
+  border-bottom: 3px dashed black;
+  border-radius: 15px;
+}
+
+#main {
+  float: left;
+  width: 75%;
+  padding: 25px;
+  border-right: 3px dashed black;
+  border-radius: 15px;
+  padding-right: 50px;
+}
+
+center{
+  border: 3px dashed black;
+  border-radius: 15px;
+  background-color: lightgreen;
+  padding: 15px;
+}
+
+.header {
+  width:100%;
+  border: 3px dashed black;
+  border-radius: 15px;
+}
+
+@media (max-width: 750px) {
+  #main{
+    width: 100%;
+  }
+  aside {
+    width: 100%;
+  }
+}
