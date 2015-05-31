@@ -10,7 +10,9 @@
   </head>
   <body>
     <center>
-      <%= image_tag 'cool.png', class: 'header' %>
+      <% link_to '/' do %>
+        <%= image_tag 'cool.png', class: 'header' %>
+      <% end %>
     </center>
 
     <div id="main" role="main">
@@ -18,6 +20,11 @@
     </div>
 
     <aside>
+      <p><div id="contact">
+        <%= link_to "Cole Willsea", "http://colewillsea.com/" %>
+        (<%= link_to "gh", "https://github.com/coleww" %>)
+        (<%= link_to "twtr", "https://twitter.com/colewillsea" %>)
+      </div></p>
       <h2>RECENT BLAGZ</h2>
       <ol>
         <% blog.articles.each do |article| %>
