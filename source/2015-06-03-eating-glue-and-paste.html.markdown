@@ -6,9 +6,6 @@ date: 2015-06-03 23:37 UTC
 # EATING GLUE
 ## Taking Over the Paste Event
 
-
-It is amazing how web browsers are basically document viewers that have been hacked with JavaScript and CSS and HTML5 into being this strange and ubiquitous app execution environment. You can even do stuff like [run DOOM in a web browser](https://hacks.mozilla.org/2011/06/doom-on-the-web/) or build a million variations of project management software, really just whatever you want to do. It's prettty cool.
-
 Over the years browsers have gained more and more access to the underlying operating system level goodness, like your camera and GPS coordinates. This level of intrusivenes used to only be possible for those who made use of awkward Flash hacks, but today this sort of stuff is made available through simple JavaScript APIs to every website you visit. _Awesome._
 
 ![Ralph likes to hack JavaScript](paste.jpg)
