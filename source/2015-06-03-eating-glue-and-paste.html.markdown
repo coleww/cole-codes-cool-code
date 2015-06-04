@@ -6,7 +6,7 @@ date: 2015-06-03 23:37 UTC
 # EATING GLUE
 ## Taking Over the Paste Event
 
-Though they started out as simple document viewers, over the years web browsers have escaped from their sandbox and gained more and more access to operating system level goodness, like your camera and GPS coordinates. This level of intrusivenes used to only be possible for those who made use of awkward Flash hacks, but today this sort of stuff is made available through simple JavaScript APIs to every website you visit. _Awesome._
+Though they started out as simple document viewers, over the years web browsers have escaped from their sandbox and gained more and more access to operating system level goodness, like your camera and GPS coordinates. This level of intrusivenes used to only be possible for those with the skills and courage to wield awkward Flash hacks, but today this sort of stuff is made available through simple JavaScript APIs to every website you visit. _Awesome._
 
 ![Ralph likes to hack JavaScript](paste.jpg)
 
