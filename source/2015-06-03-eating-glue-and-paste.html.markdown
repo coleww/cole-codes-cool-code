@@ -34,11 +34,11 @@ I used this trick to build a [JSON formatter](http://coleww.github.io/json-forma
 
 By hacking the paste event, I was able to take something that looked like this:
 
-![Ralph likes to hack JavaScript](json-og.png)
+![before](json-og.png)
 
 And make it work more like this:
 
-![Ralph likes to hack JavaScript](json-example.gif)
+![after](json-example.gif)
 
 This approach is well aligned with the UNIX philosophy, which holds among it's tenets "make small things" and "text in/text out". Only in this instance, input is handled by the paste event and the output is a div. The web page itself does only one thing and nothing else (literally, there isn't even a title or attribution) which means it composes well with other "modules" in the browser, like for example using `cmd+f` to find things in the formatted JSON. And if I needed to add an option for controlling the indentation level or something I could perhaps add it as a query param in the URL.
 
