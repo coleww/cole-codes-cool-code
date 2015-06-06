@@ -32,6 +32,14 @@ And that's it!
 
 I used this trick to build a [JSON formatter](http://coleww.github.io/json-formatter/) [[code](https://github.com/coleww/json-formatter)] because I wanted to quickly paste a JSON blob to the page and see it transformed, and an input field or textarea would just get in the way of things. Most JSON formatters on the web are laden with options and advertisements, but all I really needed was a quick way to inspect API responses.
 
+By hacking the paste event, I was able to take something that looked like this:
+
+![Ralph likes to hack JavaScript](json-og.png)
+
+And make it work more like this:
+
+![Ralph likes to hack JavaScript](json-example.gif)
+
 This approach is well aligned with the UNIX philosophy, which holds among it's tenets "make small things" and "text in/text out". Only in this instance, input is handled by the paste event and the output is a div. The web page itself does only one thing and nothing else (literally, there isn't even a title or attribution) which means it composes well with other "modules" in the browser, like for example using `cmd+f` to find things in the formatted JSON. And if I needed to add an option for controlling the indentation level or something I could perhaps add it as a query param in the URL.
 
 The JSON formatter is actually just a wrapper around a node module called [json-nice](https://github.com/JerrySievert/json), and there are probably many other small command line tools that could benefit from being turned into tiny web apps. With [browserify](https://github.com/substack/browserify-handbook) and [npm](http://maxogden.com/node-packaged-modules.html) this becomes really easy.
