@@ -109,3 +109,7 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true
 activate :google_analytics do |ga|
   ga.tracking_id = 'UA-26036675-1' # Replace with your property ID.
 end
+
+activate :meta_tags
+set_meta_tags description: 'Making art with code and vice versa.'
+set_meta_tags keywords: %w(ruby javascript code art).join(', ')
