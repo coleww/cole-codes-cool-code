@@ -1,0 +1,55 @@
+---
+title: automating bots with cron on digital ocean
+date: 2015-06-23 03:21 UTC
+---
+
+I used to deploy all my bots to Heroku, running in constant loops on those sweet sweet free single dynos.
+
+They looked something like this:
+
+```ruby
+    loop do
+        # do some stuff
+        BOT.post(funny_tweet_lol)
+        sleep 10800 + (rand 5400)
+    end
+```
+
+This is...not optimal for a number of reasons. But since I could create new Heroku apps for free from the command line it was super easy, and, well, why not. I even made a [twitter bot generator ruby gem](https://github.com/coleww/twitter_bot_generator) around the concept. Don't judge me.
+
+With deng near fifty of these things running, I was not much pleased to hear about the new Heroku pricing plan. Though of course I couldn't get mad cuz it was free servers in the first place. While I could have meticulously gone through all my Heroku apps and updated them to not loop/sleep forever and instead scheduled the scripts to run at various intervals, I figured it was finally time to get close to that cloud server metal and put together a lil droplet for myself in the Digital Ocean.
+
+There are many tutorials on setting up virtual servers, but I found that the biggest pain point in the process was getting my scripts to run on a schedule with cron.
+
+1. WHY IS THERE NO NODE.JS HERE?!
+
+Even though I had installed all the nodes and rubies, my cron seemed to just ignore them. I thought that was quite rude.
+
+It turns out that cron jobs are run with a very minimal environment setup, for reasons that I guess are cool. You can look up why but honestly it's totally boring.
+
+To fix this, we just need to export our path. First, enter `echo PATH=$PATH` to export your droplet's path, and then copy paste the output into your crontab.
+
+This was my output:
+
+```
+root@1404-64:~# echo PATH=$PATH
+PATH=/root/.nvm/versions/v0.12.2/bin:/usr/local/rvm/gems/ruby-2.2.1/bin:/usr/local/rvm/gems/ruby-2.2.1@global/bin:/usr/local/rvm/rubies/ruby-2.2.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/rvm/bin
+```
+
+And just dump it in the `crontab -e` before your job listings.
+
+```
+#
+# For more information see the manual pages of crontab(5) and cron(8)
+#
+# m h  dom mon dow   command
+PATH=/root/.nvm/versions/v0.12.2/bin:/usr/local/rvm/gems/ruby-2.2.1/bin:/usr/local/rvm/gems/ruby-2.2.1@global/bin:/usr/local/rvm/rubies/ruby-2.2.1/bin:/usr$
+```
+
+2. .././../././relative paths :<
+
+So now I had node, but my require('./module') calls didn't seem to work! Cron apparently is not only PATHless but also pathless. My crons looked something like `* * * * * node bots/lolbot/bot.js >> ~/lol.log` but in order to correctly set my working path, I just had to `cd` into it's directory before running it, like so: `* * * * * cd bots/lolbot && node bot.js >> ~/lol.log`.
+
+-----------------------
+
+This "blog post" was [tested](https://twitter.com/colewillsea/lists/my-robots) on a 512MB Ram20GB SSD Disk Ubuntu 14.04 x64 Digital Ocean droplet but will probably apply for pretty much any linux-y system anywhere.
