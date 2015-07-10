@@ -7,7 +7,7 @@ tags:
 # Shelling Out
 ## I would gladly shell out 5$ for you to pipe a burrito to me, streaming, over the course of the next 7 minutes.
 
-Traditionally, one would connect the output of various programs to the inputs of others with pipes (`|`) directly on the command line, or within the depths of a shell script, like so `cd | grep potatoes`.
+Traditionally, in UNIX land, one would connect the output of various programs to the inputs of others with pipes (`|`) directly on the command line, or within the depths of a shell script, like so `cd | grep potatoes`. This is a great way to compose complex actions out of many small utilities.
 
 ![pipe](pipe.png)
 
