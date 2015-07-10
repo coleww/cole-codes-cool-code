@@ -7,9 +7,7 @@ tags:
 # Shelling Out
 ## I would gladly shell out 5$ for you to pipe a burrito to me, streaming, over the course of the next 7 minutes.
 
-I like the UNIX philosophy which holds, among other things, that it's best to build tools that do one thing really well. With a plethora of focused modules at our disposal building an app becomes a matter of connecting them together in new and interesting ways. But a side effect to this preference for small things is that you end up starting new projects all the time! And if we're doing repetitive tasks to setup our small modules then we might as well write some more small modules to help reduce this tedium. Turtles all the way down.
-
-Traditionally one would connect the output of various programs to the inputs of others with pipes (`|`), like so `cd | grep potatoes`.
+Traditionally, one would connect the output of various programs to the inputs of others with pipes (`|`) directly on the command line, or within the depths of a shell script, like so `cd | grep potatoes`.
 
 ![pipe](pipe.png)
 
