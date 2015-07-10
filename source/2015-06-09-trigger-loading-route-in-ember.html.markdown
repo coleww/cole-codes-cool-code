@@ -1,7 +1,10 @@
 ---
-title: Trigger Loading Routes in Ember
+title: Manually Trigger Loading Routes in Ember
 date: 2015-06-09 17:12 UTC
 ---
+
+# Manually Trigger Loading Routes in Ember
+## cuz Ember can't do  e v e r y t h i n g  for you
 
 Loading routes in Ember are pretty frigging sweet. You can drop a spinner .gif pretty much any frigging where you want. You can even make nested loading routes: it's frigging awesome.
 
