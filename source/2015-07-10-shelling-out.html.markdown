@@ -7,11 +7,15 @@ tags:
 # Shelling Out
 ## I would gladly shell out 5$ for you to pipe a burrito to me, streaming, over the course of the next 7 minutes.
 
-Traditionally, in UNIX land, one would connect the output of various programs to the inputs of others with pipes (`|`) directly on the command line, or within the depths of a shell script, like so `cd | grep potatoes`. This is a great way to compose complex actions out of many small utilities.
+Traditionally in UNIX land one would connect the output of various programs to the inputs of others with pipes (`|`) directly on the command line, or within the depths of a shell script, like so:
+
+`cat recipe.txt | grep potatoes >> potato_ideas.txt`
+
+This is a great way to compose complex actions out of many small utilities.
 
 ![pipe](pipe.png)
 
-This works fine for non-interactive programs that are all text-in/text-out, and you can certainly write bash scripts taht `touch` and `mkdir` your way to much accomplishment, but what about  more complicated CLI tools like npm, bower, ember, rails, or git which might do things like prompt the user, hit the network, or generate a metric ton of files? Well, you can always shell out to them instead!
+Piping works fine for non-interactive programs that are all text-in/text-out, and you can certainly write bash scripts that `touch` and `mkdir` your way to many victories, but what about integrating more complicated CLI tools like npm, bower, ember, rails, or git? These programs do things like prompt the user to make decisions, hit the network, or generate a metric ton of files, and it might get unwieldy to try to control such chaos directly from the command line. Instead, you can write a script that shells out to them!
 
 ![shelling](shelling.png)
 
@@ -34,7 +38,7 @@ exec('ls', function (error, stdout, stderr) {
 });
 ```
 
-With these, you can easily run shell commands and respond to their output as part of your script. But what if instead of just running a command you want to turn over control to a different program? Maybe that program has user prompts that need answering or it shows some pretty sweet terminal graphics
+With these, you can easily run shell commands and respond to their output as part of your script. But what if instead of just running a command you want to turn over control to a different program? Maybe that program has user prompts that need answering or it shows some pretty sweet terminal graphics.
 
 In Ruby you can use `exec`, which replaces the current process with the given command:
 
