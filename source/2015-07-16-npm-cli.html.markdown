@@ -32,7 +32,7 @@ shhhh go back to the command line:
 
 Go back to the text editor and add:
 
-```
+```javascript
 var argv = require('yargs')
   .alias('h', 'help')
   .help('help')
@@ -75,7 +75,7 @@ Yes. Sure. Lets edit some text.
 
 First we wrap our original non-pipey code with an if block:
 
-```
+```javascript
 if(process.stdin.isTTY) {
   var output = yrModule(argv._.join(" "), argv.i)
   process.stdout.write(output)
@@ -86,7 +86,7 @@ if(process.stdin.isTTY) {
 
 And then the else case, for pipey-times:
 
-```
+```javascript
 } else {
   var data = ''
   process.stdin.resume()
@@ -108,7 +108,7 @@ If your module is super complex and might be used on datasets that can't be stor
 
 Cool! Now your module is ready to do all sorts of command line tricks. The last thing you need to remember to do before publishing this update to npm is adding a "bin" entry to your package.json file so that yr CLI script is available in the PATH of those who install your module. (But if you forget sometimes don't worry about dat inevitable post-npm-publish-version-bump-re-publish it happens to the best of us.)
 
-```
+```javascript
 "bin": {
     "yrModule": "cmd.js"
 },
