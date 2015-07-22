@@ -1,0 +1,66 @@
+---
+title: Building a simple CORS API in node
+date: 2015-07-22 15:09 UTC
+tags:
+---
+
+# Building a simple CORS API in node
+## TASTE THE ROCKIES
+
+So you want to build a lil API. Maybe you have some live data to share with the world, maybe you want to make a [funny joke](http://bikeshed.io/), maybe I don't really even care what your reasons are. If you would like lots of people to use your API, you should consider enabling CORS requests so that it can be easily accessed from client side javascript. If you don't, then when people try to use jQuery to hit yr API they will get some horrible error and the whole system will crash. Or they'll have to do some awkward proxying in order to get the data.   It's bad. Trust me.
+
+I'm sure there are all kinds of things pre-built for Express or Hapi and probably even just a plain ole' NPM module somewhere that does the CORS magic for you, but you know sometimes it's nice to drop down a lil closer to that bare http server metal.
+
+### SHOW ME THE CODE!
+
+```javascript
+var http = require("http")
+var server = http.createServer(function (req, res) {
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Request-Method', '*')
+  res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET')
+  res.setHeader('Access-Control-Allow-Headers', '*')
+
+  if ( req.method === 'OPTIONS' ) {
+    res.writeHead(200)
+    res.end()
+    return
+  }
+
+  // do stuff
+})
+server().listen(process.env.PORT || 8000)
+```
+
+You are of course welcome to copy pasta that code snippet and be on your merry way, but I have taken the liberty of reading through some boring technical documents [[1](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS), [2](http://www.w3.org/TR/cors/#access-control-request-method-request-header)] to try to figure out what the heck this all means:
+
+`res.setHeader('Access-Control-Allow-Origin', '*')`
+Here, Origin refers to the URL making the request. If you put "*" any url will work. If you put a space separated list of urls then only requests coming from those URLs will work, for example: "www.geocities.com www.example.com". You can also put "null" which would mean nothing could access it but that makes no sense so probably just forget it is even an option.
+
+`res.setHeader('Access-Control-Request-Method', '*')`
+STRAIGHT FROM THE SPEC: "The Access-Control-Request-Method header indicates which method will be used in the actual request as part of the preflight request." TBQH, I have no idea what this means. The star is probably fine. I don't see how this is much different than the next entry:
+
+`res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET')`
+Here you list which HTTP request verbs are allowed. More on the OPTIONS request later. You could obviously add PUT or POST or PATCH or DELETE or actually I think that is it that is all that you can add to this comma separate list. The spec adds a note that "The `Allow` header is not relevant for the purposes of the CORS protocol", so take that as you will.
+
+`res.setHeader('Access-Control-Allow-Headers', '*')`
+Much like the All-Methods reqsponse header, here you specify which request header fields to allow. If yr API is super wicked and secret then maybe you should put some controls on it.
+
+- The Pre-Flight Request
+
+```
+if ( req.method === 'OPTIONS' ) {
+  res.writeHead(200)
+  res.end()
+  return
+}
+```
+
+Sometimes, the CORS request needs to ask the API if it can CORS before it even attempts to CORS. That's pretty weird stuff, but it's also fairly typical as far as how the internets work. Just roll with it: if you get an OPTIONS request, 200 ok it immediately. The response will already contain all the CORS headers that you set, so that whatever is making the OPTIONS request knows what to do next.
+
+____________________________________
+
+There you have it! Now your users can access your API using javascript in the browser OR the server, and you can finally build a hexamorphic web application!
+
+You can see the cors in use in [this project](https://github.com/coleww/corpora-api), which basically serves up a directory of JSON files as an API. (but is also sadly not currently deployed anywhere)
+
