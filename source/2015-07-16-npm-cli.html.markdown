@@ -9,11 +9,11 @@ tags:
 
 Ok so you have written a pretty sweet node module. *nice*. Ok so maybe you want to make this utility available on the command line?
 
-`touch cmd.js` lets make a file!
+-  `touch cmd.js` => lets make a file!
 
-`chmod +x cmd.js` lets make it executable!
+- `chmod +x cmd.js` => lets make it executable!
 
-`./cmd.js` doesnt do anything yet!
+- `./cmd.js` => doesnt do anything yet!
 
 But hey, it ran on the command line!
 
@@ -21,14 +21,15 @@ THE END
 
 Ok so open up cmd.js in the text editor of yr choosing and add:
 
-`#!/usr/bin/env node` This tells computer how to run this script
-`var yrModule = require('./')` Load up that code
+- `#!/usr/bin/env node` => This tells computer how to run this script
+
+- `var yrModule = require('./')` => Load up that code
 
 But wait! What about arguments! I have a lot to say!
 
 shhhh go back to the command line:
 
-`npm install yargs --save` [yargs](https://www.npmjs.com/package/yargs) is pretty cool. [minimist](https://www.npmjs.com/package/minimist) is also pretty cool. I ended up using yargs due to reasons that I cannot recall. Cool story.
+- `npm install yargs --save` => [yargs](https://www.npmjs.com/package/yargs) is pretty cool. [minimist](https://www.npmjs.com/package/minimist) is also pretty cool. I ended up using yargs due to reasons that I cannot recall. Cool story.
 
 Go back to the text editor and add:
 
@@ -45,31 +46,35 @@ var argv = require('yargs')
 
 Of course...you should probably edit things to suit yr module. You can chain multiple example/alias/describe calls if you want to show off more functionality or define other options.
 
-`./cmd.js -h` => automatic documentation!
+- `./cmd.js -h` => => automatic documentation!
 
 Once defined, yargs literally does not care how things are passed to it.
 
-`./cmd.js -i 72 what is up with airline food?` ALL GOOD!
-`./cmd.js what is up with airline food? --intensity=72` TOTALLY COOL! SAME THING!
+- `./cmd.js -i 72 what is up with airline food?` => ALL GOOD!
+
+- `./cmd.js what is up with airline food? --intensity=72` => TOTALLY COOL! SAME THING!
 
 In either case, inside the running cmd.js script the following would be the truth:
 
-`argv._` => ['what', 'is', 'up', 'with', 'airline', 'food?']
-`argv.i` => 72
+- `argv._` => => ['what', 'is', 'up', 'with', 'airline', 'food?']
+
+- `argv.i` => => 72
 
 If your module is simple enough, you might be done! Back to the text editor!
 
-`var output = yrModule(argv._.join(" "), argv.i)` pass the arguments to yrModule (maybe it responds to jokes?)
-`process.stdout.write(output)` write the output to the terminal
-`process.exit()` exit the program
+- `var output = yrModule(argv._.join(" "), argv.i)` => pass the arguments to yrModule (maybe it responds to jokes?)
+
+- `process.stdout.write(output)` => write the output to the terminal
+
+- `process.exit()` => exit the program
 
 The UNIX ideology believes that building simple interfaces that accept text input and produce text output are super radical. We are fulfilling that dream right now. To the command line:
 
-`./cmd.js -i 12 awwwwoooooooooooooooooo | grep whales >> save_them.txt` Amazing.
+- `./cmd.js -i 12 awwwwoooooooooooooooooo | grep whales >> save_them.txt` => Amazing.
 
 Well, I don't know if yr module has anything to do with whales, but it probably should.
 
-But hey! `grep` accepts that weird `|` pipe thing! Can we accept the weird pipe thing and thus complete our embodiment of the UNIX philosophy?
+But hey! `grep` => accepts that weird `|` => pipe thing! Can we accept the weird pipe thing and thus complete our embodiment of the UNIX philosophy?
 
 Yes. Sure. Lets edit some text.
 
@@ -82,7 +87,7 @@ if(process.stdin.isTTY) {
   process.exit()
 ```
 
-`process.stdin.isTTY` basically asks node "IS THIS A TERMINAL?"
+- `process.stdin.isTTY` => basically asks node "IS THIS A TERMINAL?"
 
 And then the else case, for pipey-times:
 
@@ -102,7 +107,7 @@ And then the else case, for pipey-times:
 }
 ```
 
-`cat burrito_recipes.txt | ./cmd.js -i 400` WOW all kinds of inputs
+- `cat burrito_recipes.txt | ./cmd.js -i 400` => WOW all kinds of inputs
 
 If your module is super complex and might be used on datasets that can't be stored in RAM then you should probably stream the chunks directly into your codes rather than building up a data string and doing it all at once. But this is fine, it's fine, probably fine. Totally.
 
@@ -116,14 +121,14 @@ Cool! Now your module is ready to do all sorts of command line tricks. The last 
 
 Of course replace yrModule with whatever you want the command line executable to be. In this instance you could do:
 
-`yrModule foo fighters -i 65` probably make sure you pick a name that isn't already a thing, like `git`, that would be bad. 
+- `yrModule foo fighters -i 65` => probably make sure you pick a name that isn't already a thing, like `git`, that would be bad. 
 
 ONE LAST THING!
 
-`process.exit(1)` handle yr errors! If yr CLI script fails for some reason, exit with a 1 so that computer knows that a bad thing happened.
+- `process.exit(1)` => handle yr errors! If yr CLI script fails for some reason, exit with a 1 so that computer knows that a bad thing happened.
 
 ------------------------------
 
-`npm publish` YOU ARE A HERO
+- `npm publish` => YOU ARE A HERO
 
 You can see this sort of thing in action in this [cmd.js example code from one of my modules](https://github.com/coleww/diacriticize/blob/gh-pages/cmd.js) as well as this [wow, absolute bare minimum here, doesn't even take arguments, barely trying, cool](https://github.com/coleww/mkproj/blob/master/cmd.js)
