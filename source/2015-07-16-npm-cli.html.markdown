@@ -127,6 +127,10 @@ ONE LAST THING!
 
 - `process.exit(1)` => handle yr errors! If yr CLI script fails for some reason, exit with a 1 so that computer knows that a bad thing happened.
 
+OK ONE OTHER THING!
+
+- `"preferGlobal": true` => if your script is primarily a CLI tool and wouldn't make much sense as a local project dependency, add this so users get a warning if they don't `npm install -g`. this would be for things like scaffolding tools or video games.
+
 ------------------------------
 
 - `npm publish` => YOU ARE A HERO
