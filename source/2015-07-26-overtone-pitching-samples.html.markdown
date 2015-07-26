@@ -9,11 +9,11 @@ tags:
 
 ![otone](otone.gif)
 
-For a while now I have been [building interfaces](http://shreddit-hard-co.re/) for [creating music](http://coleww.github.io/problumz/) with [JavaScript and Web Audio](https://www.npmjs.com/package/drone-e-o-synth), but apparently Overtone already does everything I could ever possibly think of or want. Cool, my lifes work for nothing.
+For a while now I have been [building interfaces](http://shreddit-hard-co.re/) for [creating music](http://coleww.github.io/problumz/) with [JavaScript and Web Audio](https://www.npmjs.com/package/drone-e-o-synth), but apparently Overtone already does everything I could ever possibly think of or want. Awesome, my lifes work for nothing.
 
 One of the coolest things about Overtone is that it interfaces directly with [Freesound](https://www.freesound.org/), a database of free audio samples. That means that you can execute `(freesound 123456)` and the audio file at ID 123456 will be automatically downloaded, stored in `.overtone/assets`, and played back. I don't know what sample 123456 is, so listener beware... 
 
-With this newly discovered power I began scouring the Freesound website for vocal samples to lay on top of my music. I found this sample pack called [Simplesong (MAC) pitched vocal formants](https://www.freesound.org/people/beskhu/packs/4560/) and set out to convert it into an instrument along the lines of this [blog post by Joseph Wilk](http://blog.josephwilk.net/clojure/creating-instruments-with-overtone.html)
+With this newly discovered power I began scouring the Freesound website for vocal samples to lay on top of my music. I found this sample pack called [Simplesong (MAC) pitched vocal formants](https://www.freesound.org/people/beskhu/packs/4560/) and set out to convert it into a playable instrument along the lines of this [blog post by Joseph Wilk](http://blog.josephwilk.net/clojure/creating-instruments-with-overtone.html)
 
 Now that I had samples that I liked I just needed to grab their IDs from the website. The aformentioned Joseph Wilk post contains a Ruby script for grabbing ids for a pack, and I also wrote a [node script](https://gist.github.com/coleww/939bc606645c57dd1b29) for grabbing IDs based on a query. 
 
