@@ -7,6 +7,8 @@ tags:
 # Pitching Samples Around In Overtone
 ## because sometimes, you're too lazy to sample the entire piano
 
+![otone](otone.gif)
+
 For a while now I have been [building interfaces](http://shreddit-hard-co.re/) for [creating music](http://coleww.github.io/problumz/) with [JavaScript and Web Audio](https://www.npmjs.com/package/drone-e-o-synth), but apparently Overtone already does everything I could ever possibly think of or want. Cool, my lifes work for nothing.
 
 One of the coolest things about Overtone is that it interfaces directly with [Freesound](https://www.freesound.org/), a database of free audio samples. That means that you can execute `(freesound 123456)` and the audio file at ID 123456 will be automatically downloaded, stored in `.overtone/assets`, and played back. I don't know what sample 123456 is, so listener beware... 

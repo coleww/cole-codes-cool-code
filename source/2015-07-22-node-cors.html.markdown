@@ -7,6 +7,7 @@ tags:
 # Building a simple CORS API in node
 ## TASTE THE ROCKIES
 
+![cors](cors.png)
 So you want to build a lil API. Maybe you have some live data to share with the world, maybe you want to make a [funny joke](http://bikeshed.io/), maybe I don't really even care what your reasons are. If you would like lots of people to use your API, you should consider enabling CORS requests so that it can be easily accessed from client side javascript. If you don't, then when people try to use jQuery to hit yr API they will get some horrible error and the whole system will crash. Or they'll have to do some awkward proxying in order to get the data.   It's bad. Trust me.
 
 I'm sure there are all kinds of things pre-built for Express or Hapi and probably even just a plain ole' NPM module somewhere that does the CORS magic for you, but you know sometimes it's nice to drop down a lil closer to that bare http server metal.
