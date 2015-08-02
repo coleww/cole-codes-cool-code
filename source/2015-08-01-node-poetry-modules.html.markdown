@@ -1,7 +1,7 @@
 ---
 title: Node.js Poetic Modules
 date: 2015-08-01 22:53 UTC
-tags: Node.js, npm, poetry, literature, UNIX
+tags: node, npm, poetry, literature, UNIX
 ---
 
 # Node.js Poetic Modules
@@ -30,7 +30,7 @@ While there are many Node.js modules available for interfacing with every IO str
 
 - [new-slang](https://github.com/coleww/new-slang) accepts a map of string sequences to string replacements, and transforms strings of text by replacing those string sequences with the, err, uh, replacements. For example, given a map of `{ou: 'ooo'}` and a string like `'you dawg'`, this module would return `'yooo dawg'`. If the function was called over and over with a map like `{ou: ooui}` and the output of the previous transformation it might produce something similar to [Allison Parrish](https://github.com/aparrish/linear-lsystem-poetry)'s l-system poem generator.
 
-- [lipogram](https://github.com/coleww/lipogram) demonstrates another constraint of the Oulipo whereby a given text does not contain a letter or set of letters, for example [A Void by Georges Perec](https://en.wikipedia.org/wiki/A_Void) which does not contain the letter e. One could perhaps draw deep meaning from a poem composed out of sentences from Ruby on Rails blog posts that do not contain the letters `["C", "O", "M", "P", "U", "T", "E", "R"]`.
+- [lipogram](https://github.com/coleww/lipogram) demonstrates another constraint of the Oulipo whereby a given text does not contain a letter or set of letters, for example [A Void by Georges Perec](https://en.wikipedia.org/wiki/A_Void) which does not contain the letter e. One could, perhaps, draw deep meaning from a poem composed out of sentences from Ruby on Rails blog posts that do not contain the letters `["C", "O", "M", "P", "U", "T", "E", "R"]`.
 
 - [each-cons](https://github.com/coleww/each-cons) does not do anything on it's own...it is just a helper function that exists in Ruby which I wanted to have available in Node.js without requiring all of underscore/lodash/whatever. This function returns consecutive sequences of an array, so given `[1, 2, 3, 4, 5]` and a sequence length of `3`, it would return `[[1, 2, 3], [2, 3, 4], [3, 4, 5]]`. This is particularly handy for constructing [Markov chains](https://www.khanacademy.org/computing/computer-science/informationtheory/moderninfotheory/v/markov_chains), and, I am certain, other things.
 
