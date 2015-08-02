@@ -1,7 +1,7 @@
 ---
 title: Node.js Poetic Modules
 date: 2015-08-01 22:53 UTC
-tags: node, npm, poetry, literature, UNIX
+tags: node, npm, poetry, literature, unix
 ---
 
 # Node.js Poetic Modules

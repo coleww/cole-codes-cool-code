@@ -1,10 +1,10 @@
 ---
-title: Building a simple CORS API in node
+title: Setting up a simple CORS API in node
 date: 2015-07-22 15:09 UTC
 tags: node, cors, api, http, the rocky mountain brew
 ---
 
-# Building a simple CORS API in node
+# Setting up a simple CORS API in node
 ## TASTE THE ROCKIES
 
 ![cors](cors.png)
