@@ -1,6 +1,7 @@
 ---
 title: automating bots with cron on digital ocean
 date: 2015-06-23 03:21 UTC
+tags: cron job, digital ocean, twitter bots, path, ubuntu, UNIX
 ---
 
 # automating bots with cron on digital ocean

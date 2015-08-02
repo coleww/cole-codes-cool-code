@@ -1,6 +1,7 @@
 ---
 title: Eating Glue
 date: 2015-06-03 23:37 UTC
+tags: paste events, browser hijacking, magic, glue, UNIX
 ---
 
 # EATING GLUE

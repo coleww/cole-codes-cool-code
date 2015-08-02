@@ -1,7 +1,7 @@
 ---
 title: Building a *nice* CLI For Your Sick npm Module
 date: 2015-07-16 01:10 UTC
-tags:
+tags: node, npm, cli tool, pipe, unix, command line, bash, yargs, UNIX
 ---
 
 # Building a *nice* CLI For Your Sick npm Module

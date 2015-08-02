@@ -10,3 +10,4 @@ gem "redcarpet"
 gem "builder", "~> 3.0"
 gem "middleman-google-analytics"
 gem 'middleman-meta-tags'
+gem "middleman-livereload", "~> 3.3.0"

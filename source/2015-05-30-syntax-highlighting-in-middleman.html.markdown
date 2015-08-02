@@ -1,6 +1,7 @@
 ---
 title: 100% EZ Syntax Highlighting With Middleman
 date: 2015-05-30 19:12 UTC
+tags: middleman, syntax highlighting, code, meta-blog, ruby, markdown, john gruber
 ---
 
 # 100% EZ Syntax Highlighting With Middleman

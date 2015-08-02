@@ -1,6 +1,7 @@
 ---
 title: Manually Trigger Loading Routes in Ember
 date: 2015-06-09 17:12 UTC
+tags: ember, loading routes, spinner gif, tom dale
 ---
 
 # Manually Trigger Loading Routes in Ember
