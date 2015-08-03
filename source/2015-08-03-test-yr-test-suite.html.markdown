@@ -29,7 +29,7 @@ You are correct, Ruby is like that.
 
 ### NODE.JS
 
-I recently tried to do this trick again in Node and wound up facing some strange issues. I thought I could take the easy route and just `require` my test files, and after that failed I even put in some extra effort to test out something like `exec(cd botDir && npm test)`, but I instantly hit a wall that seemed to be surrounding a littly bundle of hell that we all know as `/node_modules`. 
+I recently tried to do this trick again in Node and wound up facing some strange issues. I thought I could take the easy route and just `require` my test files, and after that failed I even put in some extra effort to test out something like `cd newDir && npm test`, but I instantly hit a wall that seemed to be surrounding a little bundle of hell that we all know as `/node_modules`. 
 
 Don't get me wrong, npm is A M A Z I N G, but when it comes to "how my JavaScript dependencies get from the internet to a compiled state in my project folder" I know absolutely nothing and prefer to keep it that way. The error I was facing seemed to be that when my project's copies of tap/tape ran the test suite for the generated project, there was some sort of unfathomable versioning error that caused the function/constant `defined` to be `undefined`. O_o wow.
 
