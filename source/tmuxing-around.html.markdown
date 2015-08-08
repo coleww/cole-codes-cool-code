@@ -1,11 +1,11 @@
 ---
-title: tmuxing-around
+title: TMUXing around
 date: 2015-07-25 16:51 UTC
 tags: tmux unix ssh emacs
 ---
 
-START TMUXING AROUND MORE
-USING TMUX, SSH, OSX
+# TMUXing around 
+## 
 
 
 https://github.com/coleww/dotfiles/blob/master/.tmux.conf
@@ -16,19 +16,23 @@ Rough approximation of my .tmux.conf with explanations.
 
 THE ONLY TMUX COMMANDS U NEED
 
+- sshin trick, attach directly to the mux, detach disconnects. You'll need a tmux running on the server for it to work. 
+```bash
+sshin(){
+  ssh $1 -t tmux a
+}
+```
 
+You'll also need to put some stuff in the .tmux.conf file on your server. 
+Make a .tmux.conf file on your server in the home directory. You can copy and paste [https://github.com/coleww/dotfiles/blob/master/.tmux.conf](my settings) if you like, or try out bits and pieces to make your own configuration. Putting dotfiles on github will make this process way easier, should consider it. 
 
-- sshin trick, attach directly to the mux, detach disconnects.
+When you run `tmux` it will automatically look for a file named .tmux.conf and use it to configure itself. for when you are meticulously curating yr dotfiles
 
-
-C-a c open new window
-C-a number => jump to that number window 
-C-a arrow?
-
-
-
-
-
+```
+# force a reload of the config file
+unbind r
+bind r source-file ~/.tmux.conf
+```
 
 FIRSTLY
 remap prefix to CTRL + a (or whatever you want.) b is totally absurd
@@ -38,9 +42,8 @@ unbind C-b
 bind C-a send-prefix
 ```
 
-
 SECONDLY
-enable the mouse
+enable the mouse to do all of the things.
 ```
 set -g mode-mouse on
 set -g mouse-resize-pane on
@@ -48,29 +51,43 @@ set -g mouse-select-pane on
 set -g mouse-select-window on
 ```
 
+THIRDLY: some minor things
+```
 # remove administrative debris (session name, hostname, time) in status bar
 set -g status-left ''
 set -g status-right ''
 
 # makes entering commands much easier
 set -s escape-time 0
+```
 
 
+Point of tmux is to be able to run multiple things in one shell, so how do you get around?
+
+C-a c open a window
+C-a & close a window
+C-a d detach from tmux
+
+```
 # quick pane cycling
 unbind ^A
 bind ^A select-pane -t :.+
 # number screens 1-9 cuz thats how keyboard is
 set -g base-index 1
 
-
-# force a reload of the config file
-unbind r
-bind r source-file ~/.tmux.conf
-
-# easier splitting, open splits in current path
+# easier-to-remember window splitting. | is horizontal, - is vertical.
 unbind %
 bind | split-window -h
 bind - split-window -v 
+```
+
+C-a number => jump to that number window. 
+C-| => split window horizontally
+C-- => split window vertically
+
+
+
+
 
 
 FUN TRICK:
@@ -85,7 +102,5 @@ fi
 ```
 
 
+to copy stuff, hold the option key to select it. won't resepct tmux/emacs panes, but you can grab dem errors
 
-Sadly, started TMUX, copy-paste, scroll, all mouse movement was not working. I know i should learn the shortcuts (i started on emacs!) but for certain things like resizing terminal panes or selecting text i just can't bring myself to not use a mouse.
-
-=> list links to maybe solutions?

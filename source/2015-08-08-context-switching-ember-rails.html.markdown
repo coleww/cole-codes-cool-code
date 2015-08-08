@@ -1,7 +1,7 @@
 ---
 title: Eliminating The Ember-Rails Context Switch
 date: 2015-08-08 16:48 UTC
-tags: ember rails generators
+tags: ember, rails, generators, ruby, node, unix
 ---
 
 # Eliminating The Ember-Rails Context-Switch
@@ -55,7 +55,7 @@ And the computer would figure out what kind of project folder we are inside of a
 
 ![geee demo](g-demo.gif)
 
-geee/g will run any generator that Rails or Ember supports, and could be easily be forked and extended to cover other frameworks (if such things exist). 
+geee/g will run any generator that Rails or Ember supports, and could be easily be forked and extended to cover other frameworks (if such things exist). It is also an exemplary demonstration of the composability of simple command line tools in a UNIX fashion. 
 
 The best part about geee is that it comes packaged as either a [Ruby gem](https://rubygems.org/gems/geee) or a [Node module](https://www.npmjs.com/package/geee), so that way you don't even have to figure out the context of what package manager you are using! 
 
