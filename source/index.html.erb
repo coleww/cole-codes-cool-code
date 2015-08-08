@@ -2,9 +2,21 @@
 pageable: true
 ---
 
-
+<h1>POSTS</h1>
+<ol>
 <% blog.articles.each_with_index do |article, i| %>
-  <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
-  <!-- <%= article.body %> -->
+  <li><h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2></li>
 <% end %>
-
+</ol>
+<h1>CALENDAR</h1>
+<ul>
+<% blog.articles.group_by{|a| a.date.year }.sort().reverse().each do |year, articles| %>
+  <li><%= link_to "#{year}: #{articles.count} BLAGS", blog_year_path(year) %>
+    <ul>
+      <% articles.group_by{|a| a.date.month }.each do |month, arts| %>
+        <li><%= link_to "#{Date::MONTHNAMES[month]} #{year}: #{arts.count} #{['blogotronz', 'bloggies', 'blags', 'blaahhhges', 'blogs', 'bags', 'bloogss'].sample}", blog_month_path(year, month) %></li>
+      <% end %>
+    </ul>
+  </li>
+<% end %>
+</ul>
