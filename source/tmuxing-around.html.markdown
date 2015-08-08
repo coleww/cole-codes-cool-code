@@ -1,7 +1,7 @@
 ---
 title: tmuxing-around
 date: 2015-07-25 16:51 UTC
-tags:
+tags: tmux unix ssh emacs
 ---
 
 START TMUXING AROUND MORE
@@ -11,6 +11,8 @@ USING TMUX, SSH, OSX
 https://github.com/coleww/dotfiles/blob/master/.tmux.conf
 
 Recently started doing my work-work in a dev-box in the cloud. Wanted to be able to treat ssh connection like i was just on local filesystem. A bit overwhelmed, hard to find exact info.
+
+Rough approximation of my .tmux.conf with explanations. 
 
 THE ONLY TMUX COMMANDS U NEED
 
