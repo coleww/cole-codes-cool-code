@@ -5,28 +5,18 @@
 # Time.zone = "UTC"
 
 activate :blog do |blog|
-  # This will add a prefix to all links, template references and source paths
-  # blog.prefix = "blog"
-
   blog.permalink = "{title}.html"
-  # Matcher for blog source files
-  # blog.sources = "{year}-{month}-{day}-{title}.html"
+  blog.sources = "{year}-{month}-{day}-{title}.html"
   blog.taglink = "blog/tags/{tag}.html"
-  # blog.layout = "layout"
-  # blog.summary_separator = /(READMORE)/
-  # blog.summary_length = 250
-  # blog.year_link = "{year}.html"
-  # blog.month_link = "{year}/{month}.html"
-  # blog.day_link = "{year}/{month}/{day}.html"
-  # blog.default_extension = ".markdown"
+  blog.layout = "layout"
+  blog.year_link = "blog/{year}.html"
+  blog.month_link = "blog/{year}/{month}.html"
+  blog.day_link = "blog/{year}/{month}/{day}.html"
+  blog.default_extension = ".markdown"
 
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
 
-  # Enable pagination
-  blog.paginate = true
-  blog.per_page = 5
-  # blog.page_link = "page/{num}"
 end
 
 page "/feed.xml", layout: false
@@ -78,5 +68,5 @@ activate :google_analytics do |ga|
 end
 
 activate :meta_tags
-set_meta_tags description: 'Making art with code and vice versa.'
+set_meta_tags description: 'Writing code that makes art and vice versa.'
 set_meta_tags keywords: %w(ruby javascript code poetry clojure npm algorithm art).join(', ')
