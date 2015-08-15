@@ -1,5 +1,5 @@
 ---
-title: mocking-the-logs
+title: Mocking The Logs
 tags:
 ---
 
@@ -13,7 +13,7 @@ GOTTA TEST EM ALL!
 Maybe yr making a CLI and it logs important information? Maybe you want to verify that the right errors happen at the right times? 
 
 
-https://github.com/coleww/mkproj/blob/master/test.js#L12-L14
+<!-- https://github.com/coleww/mkproj/blob/master/test.js#L12-L14 --> this link now borked
 
 ```javascript
   tap.test('does all the stuff', function (t) {

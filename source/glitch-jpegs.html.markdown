@@ -1,11 +1,11 @@
 ---
-title: gitch-jpegs
+title: open up yr jpegs 
 date: 2015-08-08 17:57 UTC
 tags:
 ---
 
-# open up jpegs in text editors
-## seriously it is awesome
+# open up yr jpegs 
+## ...in text editors
 
 This quote from substack pretty much sums up everything I am about to tell you:
 
@@ -14,15 +14,13 @@ This quote from substack pretty much sums up everything I am about to tell you:
 
 Genius.
 
-JPEG/JPG compression is such that you can make changes to it's data and it will still try to load something, usually ending up with weird glitchy art.
+You can make arbitrary changes to the data of a JPEG and because of how the compression works it will still usually be able to load something, usually ending up with weird glitchy art.
 
-Cory Arcangel wrote a research paper on the jpeg algorithm which is supposedly important but i understand little of it. math is hard.
+LINK TO Cory Arcangel wrote a research paper on the jpeg algorithm which is supposedly important but I understand very little of it. math is hard.
 
-You can of course just open an image, delete, type randomly, copy and paste, etc., save it, and re-open to see a profound effect. Take care to avoid doing anything to the first 1/5-1/4 of the file, which contains important header information that must not be manipulated.  There is probably some bytesequence you could look for that signifies the end of the headers, but, you know, data format specifications and mathematics. blah blah blah
+You can of course just open an image, delete, type randomly, copy and paste, etc., save it, and re-open to see a profound effect. Take care to avoid doing anything to the first 1/5-1/4 of the file, which contains important header information that must not be manipulated.  There is probably some byte sequence you could look for that signifies the end of the headers, but, you know, data format specifications and mathematics, blah blah blah. Tweet at me if you know this!
 
-Another approach is to encode a glitching algorithm in, err, um, code. Might take control paramaters, which you can modify to explore the possibilities of this failure. 
-
-I published one such algorithm as a Ruby gem called [scrambled_jpeg](https://github.com/coleww/scrambled_jpeg). Annotated sauce below:
+Another approach is to encode a glitching algorithm in, err, um, code. I published one such algorithm as a Ruby gem called [scrambled_jpeg](https://github.com/coleww/scrambled_jpeg). Annotated sauce and examples below:
 
 ```ruby
 def scramble filename, n=5
@@ -49,19 +47,14 @@ def scramble filename, n=5
 end
 ```
 
-
-/// EXAMPLES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
+DEMO JPEGS HERE WITH N LEVE
 
 
 
-Could shuffle the data up totally randomly (probably gonna fail, shuffle larger chunks so as to be less disruptive. yes this is the one instance in comptuer science where you should NOT disrupt), 
-could copy paste the front page of the new york times into the middle of the file, 
-could take 2 jpegs and randomly mash their datas together (for political juxtaposition and statement perhaps?)
+This is just one example of a glitching algorithm, you could do many things:
 
-Many possibilities for different algorithms, as well as interfaces to these algorithms. Web cam or some sort of live image feed as input, sliders and knobs for the params. 
+- Could shuffle the data up totally randomly (probably gonna fail, shuffle larger chunks so as to be less disruptive. yes this is the one instance in comptuer science where you should NOT disrupt), 
+- could copy paste the front page of the new york times into the middle of the file, 
+- could take 2 jpegs and randomly mash their datas together (for political juxtaposition and statement perhaps?)
 
-
-
-
-
+not only that, could build an interface to the algorithm for live experimentation. some params might be prettier than others. LIKE TO SNORPEY
