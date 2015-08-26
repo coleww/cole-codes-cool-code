@@ -57,6 +57,8 @@ It is indeed unfortunate that I now have this `test_modules` thing checked into 
 
 To take this one step further, for a particularly complicated generator app one might use a meta-TDD style. The test suite for the generator would simply create a new app and call it's test suite. You would start out by writing the bare minimum of code to generate an app that has a failing test, then make that generated test pass, and continue in this fashion, forever and ever. For a larger project like Yeoman which abstracts project generation across multiple domains, one might even write a generator-generator which could be meta-meta-test-driven. Turtles, all the way.
 
-<center>![turtles](turts.jpg)</center>
+<center>![turtles](turts.jpg)
 
 ### WOWWWW
+</center>
+

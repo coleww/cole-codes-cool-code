@@ -1,5 +1,5 @@
 ---
-title: TDD for the lazy, patient, and messy
+title: TDD for the Lazy, Patient, and Messy
 date: 2015-08-26 14:37 UTC
 tags: tdd, clojure, human brain response times, magic square
 ---

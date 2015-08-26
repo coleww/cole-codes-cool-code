@@ -1,5 +1,5 @@
 ---
-title: shelling out to the system
+title: Shelling Out to the System
 date: 2015-07-10 03:14 UTC
 tags: shell scripts, node, ruby, exec, kexec, bash, command line, unix
 ---
