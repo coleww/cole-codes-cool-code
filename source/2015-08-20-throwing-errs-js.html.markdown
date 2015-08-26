@@ -60,5 +60,5 @@ And everything will work magically because `throw` expects to be passed an `Erro
 
 ## BE KIND TO THE USER, THROW GOOD ERRORS! 
 
-![tron: fight for the users](tron.jpg)
+<center>![tron: fight for the users](tron.jpg)</center>
 

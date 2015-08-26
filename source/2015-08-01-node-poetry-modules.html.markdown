@@ -7,7 +7,7 @@ tags: node, npm, poetry, literature, unix
 # Node.js Poetic Modules
 ## Presenting A Voice Unto The Computer
 
-![deep dreamed surrealism](surreal.png)
+<center>![deep dreamed surrealism](surreal.png)</center>
 
 
 Node.js and npm provide a wonderfully vibrant and delightfully rich ecosystem for making browser-or-terminal-based works of art. Generally I start a project by searching around for existing modules that do what I need, or if there are none then I write the module that does what I need and publish it to npm (*nice*). With browserify I can use the same code for a CLI tool as I do for a website. 
