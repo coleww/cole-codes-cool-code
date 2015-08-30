@@ -25,7 +25,7 @@ Test-driven development (TDD) is a software development process that relies on t
 
 A lot of people talk a lot of things about TDD. There are those that talk about TDD as their jobs. There are even meta-TDD consultants who talk to management about talking to their employees about TDD. But while it is easy to spew empty platitudes at developers, it is much harder to figure out how to use this knowledge in your day to day software engineering. Some skills can only be gained through practice, experience, and pain. However there are those rare techniques and stategies that can be effectively utilized on every project.
 
-Recently I discovered one such technique while working on a [code kata in clojure](https://github.com/gigasquid/wonderland-clojure-katas). The challenge was to compute a magic square: given a bunch of floating point numbers, you must arrange them in a 2-dimensional array such that ever row, column, and diagonal of the matrix/square a sum up to the same "magic number". 
+Recently I discovered one such technique while working on a [code kata in clojure](https://github.com/gigasquid/wonderland-clojure-katas). The challenge was to compute a magic square: given a bunch of floating point numbers, you must arrange them in a 2-dimensional array such that every row, column, and diagonal of the matrix/square a sum up to the same "magic number". 
 
 ![magic square](magic.png)
 
