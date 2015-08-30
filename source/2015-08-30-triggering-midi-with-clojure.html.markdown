@@ -1,8 +1,11 @@
 ---
-title: Controlling MIDI Devices With Clojure
+title: Controlling electronic Instruments With MIDI and Clojure
 date: 2015-08-30 13:58 UTC
-tags: MIDI overtone clojure music
+tags: midi, overtone, clojure, music, emacs, boss sp
 ---
+
+# Controlling Electronic Instruments With MIDI and Clojure
+## Let Rich Hickey Be Your DJ
 
 Most of the time when people are trying to use MIDI in Overtone and Clojure, they just want to play an artisanal hand-coded soft-synth with a standard MIDI keyboard. And there are plenty of helper methods and [some documentation](https://github.com/overtone/overtone/wiki/midi) to make this easy, but what if you want to use Clojure as a MIDI sequencer for hardware samplers and synthesizers? The same functional-programming and LISP-y principles that make Clojure effective for audio synthesis can be just as powerful when used for audio sequencing. 
 
