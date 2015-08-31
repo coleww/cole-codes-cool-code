@@ -1,5 +1,5 @@
 ---
-title: Controlling electronic Instruments With MIDI and Clojure
+title: Controlling Electronic Instruments With MIDI and Clojure
 date: 2015-08-30 13:58 UTC
 tags: midi, overtone, clojure, music, emacs, boss sp
 ---
