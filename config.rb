@@ -16,12 +16,11 @@ activate :blog do |blog|
 
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
-
+  blog.layout = "post_layout"
   blog.paginate = false
 end
 
 page "/feed.xml", layout: false
-
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
