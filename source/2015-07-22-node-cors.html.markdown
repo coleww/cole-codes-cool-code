@@ -43,10 +43,10 @@ Here, Origin refers to the URL making the request. If you put "*" any url will w
 STRAIGHT FROM THE SPEC: "The Access-Control-Request-Method header indicates which method will be used in the actual request as part of the preflight request." TBQH, I have no idea what this means. The star is probably fine. I don't see how this is much different than the next entry:
 
 `res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET')`
-Here you list which HTTP request verbs are allowed. More on the OPTIONS request later. You could obviously add PUT or POST or PATCH or DELETE or actually I think that is it that is all that you can add to this comma separate list. The spec adds a note that "The `Allow` header is not relevant for the purposes of the CORS protocol", so take that as you will.
+Here you list which HTTP request verbs are allowed. More on the OPTIONS request later. You could obviously add PUT or POST or PATCH or DELETE or, ... actually I think that is it, that is all that you can add to this comma separated list. The spec adds a note that "The `Allow` header is not relevant for the purposes of the CORS protocol", so take that as you will.
 
 `res.setHeader('Access-Control-Allow-Headers', '*')`
-Much like the All-Methods reqsponse header, here you specify which request header fields to allow. If yr API is super wicked and secret then maybe you should put some controls on it.
+Much like the All-Methods response header, here you specify which request header fields to allow. If yr API is super wicked and secret then maybe you should put some controls on it.
 
 - The Pre-Flight Request
 
