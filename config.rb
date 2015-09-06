@@ -70,3 +70,4 @@ end
 activate :meta_tags
 set_meta_tags description: 'Writing code that makes art and vice versa.'
 set_meta_tags keywords: %w(ruby javascript code poetry clojure npm algorithm art).join(', ')
+# activate :spellcheck

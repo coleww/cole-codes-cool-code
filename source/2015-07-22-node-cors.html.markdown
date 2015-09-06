@@ -31,7 +31,7 @@ var server = http.createServer(function (req, res) {
 
   // do stuff
 })
-server().listen(process.env.PORT || 8000)
+server.listen(process.env.PORT || 8000)
 ```
 
 You are of course welcome to copy pasta that code snippet and be on your merry way, but I have taken the liberty of reading through some boring technical documents [[1](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS), [2](http://www.w3.org/TR/cors/#access-control-request-method-request-header)] to try to figure out what the heck this all means:
