@@ -9,9 +9,9 @@ tags: sound, javascript, web audio, noise, npm
 
 The state of web audio in the browser is pretty chill these days, but using it is still very close to that audio metal. Web audio provides excellent core objects like oscillators and filters, but it is up to the user to wire them together. For complex synthesizers and effects this might involve dozens of audioNodes and many lines of code just to get that skrillex monster bass wobbles bumping out your webpage.
 
-We need a way to publish pre-assembled audio graphs with a consistent API so that our projects don't get taken over by copy pasted audioNode boilerplate. 
+We need a way to publish pre-assembled audio graphs with a consistent API so that our projects don't get taken over by copy pasted audioNode boilerplate.
 
-This pre-built synth can be thought of just like any other audioNode. It will have `start` and `stop` functions, a `connect` function to send it to the speakers or other nodes. But instead of having audioParams, it will have a `keys` function that returns the names of all the audioNodes that make up the synth. 
+This pre-built synth can be thought of just like any other audioNode. It will have `start` and `stop` functions, a `connect` function to send it to the speakers or other nodes. But instead of having audioParams, it will have a `keys` function that returns the names of all the audioNodes that make up the synth. You create such a synth by `require`'ing the module and calling it, passing the audioContext as an argument.
 
 I have been using the following interface to achieve this dream:
 
@@ -46,6 +46,20 @@ synth: {
 
 - `audioNodes ...` => Each node in the synth will be present as a property on the object, allowing for direct manipulation. Their keys can be found with `keys()`. For example, drone-e-o-synth contains the keys `['source', 'filter', 'lowFilter', 'distortion', 'volume']`
 - `fns? ...` => Other arbitrarily named functions might or might not also be present on the object, such as for performing complex control changes that would be unwieldy to do directly, like setting oscillators to play chords, or turning on that dubstep wobble. Presumably the module author would tell you about this magic if it exists.
+
+--------------------------------------------------------------
+
+To use one of these modules you would first `npm install` it, probably with a `--save-dev` as this is presumably a browserify project and because you want your dependencies to be well documented and to welcome collaboration. In your codes, you might do something like:
+
+```
+  var makeSynth = require('the-name-of-a-synth-module')
+  var context = new (window.AudioContext || window.webkitAudioContext)()
+  var synth = makeSynth(context)
+  synth.connect(context.destination)
+  synth.start()
+```
+
+At which point a horrible noise would be wailing out of your speakers! A W E S O M E!!!
 
 -----------------------------------------------------------------
 
