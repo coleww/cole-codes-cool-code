@@ -1,7 +1,7 @@
 ---
 title: After A Lot Of Thought, I Have Decided To Shut Down My VC Backed Bong
 date: 2015-09-23 12:44 UTC
-tags:
+tags: bong, satire, venture capital, my bong
 ---
 
 # After A Lot Of Thought, I Have Decided To Shut Down My VC Backed Bong
