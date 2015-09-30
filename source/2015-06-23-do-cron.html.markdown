@@ -52,6 +52,28 @@ PATH=/root/.nvm/versions/v0.12.2/bin:/usr/local/rvm/gems/ruby-2.2.1/bin:/usr/loc
 
 Now I had node, but my require('./module') calls didn't seem to work! Cron apparently is not only PATHless but also pathless. My crons looked something like `* * * * * node bots/lolbot/bot.js >> ~/lol.log` but in order to correctly set my working path, I just had to `cd` into the parent directory before running the script, like so: `* * * * * cd bots/lolbot && node bot.js >> ~/lol.log`.
 
+With this simple CD trick, all of the pains of cron went away!
+
+---------------------------------------
+
+The one other thing that I was able to do with my weird infinite-loop-Heroku-deployed bots was make it tweet at random intervals. There isn't really a way to tell a crontab to "maybe tweet once an hour". HOWEVER, you can very easily do that in whatever language your bot is in by simply comparing `Math.random()` or what have you to some percentage as a float. 
+
+For example, if you wanted your bot to tweet on the hour about once every two hours, you might do a cron like this:
+
+```
+0 * * * * cd bots/yrbot && node index.js
+```
+
+That cron would run at the top of every hour. Now inside of your index.js, do something like this:
+
+```
+if (Math.random() < 0.5) {
+  // do whatever your bot does
+}
+```
+
+Now your script is called once an hour, but it is only probably likely to tweet once every two hours! Sometimes it will tweet 2 hours in a row, and other times it might not tweet for a long time! That's ok though! You can also experiment with using very very tiny low probabilities and a cron that runs very often. Be careful though, tweeting more than once in two minutes can result in ban hammering from the Twitter police.
+
 -----------------------
 
 This "blog post" was [tested](https://twitter.com/colewillsea/lists/my-robots) on a 512MB Ram20GB SSD Disk Ubuntu 14.04 x64 Digital Ocean droplet but will probably apply for pretty much any linux-y system anywhere.
