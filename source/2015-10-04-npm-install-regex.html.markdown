@@ -1,7 +1,7 @@
 ---
 title: npm install regex
 date: 2015-10-04 16:53 UTC
-tags:
+tags: npm, node, javascript, regex, laziness
 ---
 
 # npm install regex
