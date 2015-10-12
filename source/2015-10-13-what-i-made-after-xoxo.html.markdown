@@ -7,6 +7,9 @@ tags:
 # What I Made In The Month After XOXO
 ## Anil Dash said we shouldn't just tweet "I made this" so I collected all my "I made this tweets" and made a blog post that embeds them in order and then I tweeted "I wrote this" with a link to this blog post.
 
+<!-- 49 -->
+<!-- 1.6333333333333333 a day-->
+
 <center>
 
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://t.co/l2a73RtOYC">https://t.co/l2a73RtOYC</a> just published a lil web component for picking a tonic/scale. a fork of <a href="https://twitter.com/supersole">@supersole</a> &#39;s transport component 🎼:D</p>&mdash; IMPERATOR SPOOKYOSA (@colewillsea) <a href="https://twitter.com/colewillsea/status/643799424007860224">September 15, 2015</a></blockquote>
@@ -140,7 +143,22 @@ tags:
 
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Some queneau-assembly bots that I made a while ago and apparently never tooted off about: <a href="https://twitter.com/BBCRADIO1MIX420">@BBCRADIO1MIX420</a> <a href="https://twitter.com/jrSommelierBot">@jrSommelierBot</a> <a href="https://twitter.com/HottestNewWeeds">@HottestNewWeeds</a></p>&mdash; IMPERATOR SPOOKYOSA (@colewillsea) <a href="https://twitter.com/colewillsea/status/652854555990888448">October 10, 2015</a></blockquote>
 
-THIS BLOG POST
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">ho-ho-holy crap realized i&#39;d been using iscool incorrectly, which explained some things about my bots, so i made <a href="https://t.co/sxkG3NTKn0">https://t.co/sxkG3NTKn0</a></p>&mdash; IMPERATOR SPOOKYOSA (@colewillsea) <a href="https://twitter.com/colewillsea/status/652874079926550528">October 10, 2015</a></blockquote>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">um so i made `every &quot;every {adjective} word&quot;` which is technically a bot that generates new bot ideas cc: <a href="https://twitter.com/potch">@potch</a> <a href="https://t.co/70QmisxT3p">https://t.co/70QmisxT3p</a></p>&mdash; IMPERATOR SPOOKYOSA (@colewillsea) <a href="https://twitter.com/colewillsea/status/652881737240805376">October 10, 2015</a></blockquote>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/steveklabnik">@steveklabnik</a> i liked this tweet so much i turned it into a twitter bot <a href="https://twitter.com/GgleEvryThng">@GgleEvryThng</a></p>&mdash; IMPERATOR SPOOKYOSA (@colewillsea) <a href="https://twitter.com/colewillsea/status/652897158849363968">October 10, 2015</a></blockquote>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">2:30 on a saturday seems like a good time to announce my &quot;weirdly-specific-corpora&quot; fork. &#10;any &amp; all lists accepted&#10;<a href="https://t.co/8ZxsaMshDF">https://t.co/8ZxsaMshDF</a></p>&mdash; IMPERATOR SPOOKYOSA (@colewillsea) <a href="https://twitter.com/colewillsea/status/652961275341705216">October 10, 2015</a></blockquote>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">continuing in this weeks theme of juvenile everyword clones, i present unto the world <a href="https://twitter.com/everyVapeJuice">@everyVapeJuice</a> <a href="https://t.co/KOrEVhqq5D">https://t.co/KOrEVhqq5D</a></p>&mdash; SPOOKYCOLEDUBS (@colewillsea) <a href="https://twitter.com/colewillsea/status/653202323838210048">October 11, 2015</a></blockquote>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">i made another totally juvenile twitter bot that will tweet once an hour for the next 10 years or so 🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳 <a href="https://t.co/AE8xXBBey7">https://t.co/AE8xXBBey7</a></p>&mdash; SpookySmoothFt.RobTh (@colewillsea) <a href="https://twitter.com/colewillsea/status/653581732461961216">October 12, 2015</a></blockquote>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">this bot is both an everyWord clone and a <a href="https://twitter.com/hashtag/wowwwnetwork?src=hash">#wowwwnetwork</a> &#10;&#10; <a href="https://t.co/unhgcpzgOw">https://t.co/unhgcpzgOw</a></p>&mdash; SpookySmoothFt.RobTh (@colewillsea) <a href="https://twitter.com/colewillsea/status/653598299342008320">October 12, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<!-- THIS BLOG POST -->
 
 
 
